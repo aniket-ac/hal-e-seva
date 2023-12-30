@@ -18,6 +18,7 @@ public class NewsClient {
         uriComponentsBuilder.queryParam("q",location);
         uriComponentsBuilder.queryParam("sortBy","date");
         uriComponentsBuilder.queryParam("apiKey",APP_ID);
+        uriComponentsBuilder.queryParam("language","en");
         return HttpHandler.call(restTemplate,NewsResponse.class,uriComponentsBuilder);
     }
 

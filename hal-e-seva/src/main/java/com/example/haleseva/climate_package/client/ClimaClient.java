@@ -24,4 +24,13 @@ public class ClimaClient {
         return HttpHandler.call(restTemplate, ClimaResponse.class,uriComponentsBuilder);
     }
 
+    public Optional<ClimaResponse> callClima(final String cityName) {
+
+        UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder
+                .fromHttpUrl(CLLIMA_URI).pathSegment("v2.0", "current");
+        uriComponentsBuilder.queryParam("city", cityName);
+        uriComponentsBuilder.queryParam("key", APP_ID);
+        return HttpHandler.call(restTemplate, ClimaResponse.class, uriComponentsBuilder);
+    }
+
 }

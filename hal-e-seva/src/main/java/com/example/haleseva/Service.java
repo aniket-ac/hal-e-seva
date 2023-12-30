@@ -19,7 +19,12 @@ public class Service {
     private NewsClient newsClient = new NewsClient();
 
     public LocationResponsePOJO callClima(final LocationRequestPOJO requestPOJO){
-        Optional<ClimaResponse> climaResponse = climaClient.callClima(requestPOJO.latitude, requestPOJO.longitude);
+        Optional<ClimaResponse> climaResponse;
+        if(requestPOJO.getCityName() == null){
+            climaResponse= climaClient.callClima(requestPOJO.getLatitude(), requestPOJO.getLongitude());
+        }else{
+            climaResponse= climaClient.callClima(requestPOJO.getCityName());
+        }
 
         LocationResponsePOJO locationResponsePOJO = new LocationResponsePOJO();
         locationResponsePOJO.setCity_name(climaResponse.get().getData().get(0).getCity_name());
@@ -34,6 +39,7 @@ public class Service {
             newsData.setDescription(i.getDescription());
             newsData.setUrl(i.getUrl());
             newsData.setUrlToImage(i.getUrlToImage());
+            newsData.setContent(i.getContent());
             return newsData;
         }).collect(Collectors.toCollection(ArrayList::new));
 

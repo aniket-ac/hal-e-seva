@@ -23,6 +23,7 @@ public class LocationResponsePOJO {
         public String description;
         public String url;
         public String urlToImage;
+        public String content;
     }
 
 

@@ -11,4 +11,5 @@ import lombok.Setter;
 public class LocationRequestPOJO {
     public double latitude;
     public double longitude;
+    public String cityName;
 }

@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/hal-e-seva.iml" filepath="$PROJECT_DIR$/.idea/hal-e-seva.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hal-e-seva.hal-e-seva.main~1.iml" filepath="$PROJECT_DIR$/.idea/modules/hal-e-seva.hal-e-seva.main~1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hal-e-seva.hal-e-seva.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hal-e-seva.hal-e-seva.main.iml" />
     </modules>
   </component>
 </project>
